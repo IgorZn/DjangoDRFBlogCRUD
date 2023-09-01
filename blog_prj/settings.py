@@ -40,13 +40,19 @@ INSTALLED_APPS = [
     'posts.apps.PostsConfig',
 
     # 3rd party
-    'rest_framework'
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication'
+    ],
 }
 
 MIDDLEWARE = [
