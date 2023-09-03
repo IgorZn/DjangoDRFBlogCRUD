@@ -8,6 +8,8 @@ djangorestframework = "*"
 django-rest-auth = "*"
 django = "==3.2.10"
 django-allauth = "==0.54.0"
+coreapi = "==2.3.3"
+pyyaml = "==5.1"
 
 [dev-packages]
 
