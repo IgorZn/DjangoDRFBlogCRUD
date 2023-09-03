@@ -5,10 +5,10 @@ from .views import UserViewSet, PostViewSet
 # from .views import PostList, PostDetail, UserList, UserDetail
 
 router = SimpleRouter()
+
 # the order of routers is sensitive
 router.register('users', UserViewSet, basename='users')
 router.register('', PostViewSet, basename='posts')
-8
 
 urlpatterns = [
     path('', include(router.urls)),
